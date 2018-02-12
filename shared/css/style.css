@@ -3,7 +3,55 @@
     font-family: myFirstFont;
     src: url("../fonts/xxx");
 }
+/* =CLEARFIX
+----------------------------------------------- */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix {
+	display: inline-block;
+}
+* html .clearfix {
+	height:1%;
+}
+.clearfix {
+	display: block;
+}
+/* =BODY
+----------------------------------------------- */
+body {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-size: cover;
+}
+#page {
+	max-width: 100%;
+	margin: 0 auto;
+}
+.wide {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.wide #page {
+	max-width: 100%;
+}
+.inner-wrap {
+	margin: 0 auto;
+	max-width: 1120px;
+	/*margin-left: 150px;*/
+}.my-wrap {
+	margin: 0 auto;
+	max-width: 1120px;
+}
+.content-bkg{
+	background: url("shared/img/content-bg.png");
 
+}
 .header-wrap{
 	/*width: 970px;*/
 	max-width: 100%;
@@ -21,23 +69,48 @@
 }
 
 .l-h{
+
+	position: relative;
 	background: #1875b8;
 
 	width: 13.5%;
 	height: 74px;
 	float: left;
 }
+
+
 .timeline-wrap{
 	width: 100%;
 	background: url("../img/nav-bg.png");
 
 }
 .r-h{
+	position: relative;
 	float: left;
 	width: 86.5%;
 	background: #005e9b;
 	height: 74px;
 }
+html, body {
+  overflow-x: hidden;
+}
+.l-h:before, .r-h:after{
+  content: "";
+  position: absolute;
+  /* fill vertically */
+  top: 0;
+  bottom: 0;
+  width: 9600px;
+  right: 100%;
+  background: #1875b8;
+}
+.r-h:after { 
+  width: 9600px;
+  left: 100%;
+  /* not browswer prefixed */
+  background: #005e9b;
+}
+
 .banner{
 	margin-bottom: 0;
 	padding-bottom: 0;
