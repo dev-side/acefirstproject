@@ -3,6 +3,13 @@
     font-family: myFirstFont;
     src: url("../fonts/xxx");
 }
+html, body {
+  overflow-x: hidden;
+  /*overflow-y: hidden;*/
+}
+* html .clearfix {
+	height:1%;
+}
 /* =CLEARFIX
 ----------------------------------------------- */
 .clearfix:after {
@@ -16,9 +23,7 @@
 .clearfix {
 	display: inline-block;
 }
-* html .clearfix {
-	height:1%;
-}
+
 .clearfix {
 	display: block;
 }
@@ -48,6 +53,10 @@ body {
 	margin: 0 auto;
 	max-width: 1120px;
 }
+
+
+/*------------------OhnMar----------------*/
+
 .content-bkg{
 	background: url("shared/img/content-bg.png");
 
@@ -91,9 +100,7 @@ body {
 	background: #005e9b;
 	height: 74px;
 }
-html, body {
-  overflow-x: hidden;
-}
+
 .l-h:before, .r-h:after{
   content: "";
   position: absolute;
@@ -132,13 +139,13 @@ html, body {
 	/*position: absolute;*/
 	float: left;
 	width: 13.5%;
-	background: #1874b3;
+	background: #005e9b;
 	/*margin-right: -90px;*/
 }
 #nav ul{
 	margin-bottom: 0;
 	margin-top: 0;
-	background: #1874b3;
+	background: #005e9b;
 	/*margin-left: 30%;*/
 	/*margin: 0 0 0 30%;*/
 	/*margin: 0;*/
@@ -150,7 +157,7 @@ html, body {
 #nav li{
 	
 	height: 49px;
-	border-bottom: 1px solid #1874b3;
+	border-bottom: 1px solid #005e9b;
 	text-decoration: none;
 	line-height: 49px;
 }
@@ -406,10 +413,10 @@ html, body {
 	padding-bottom: 50px;
 }
 .sec5-wrap h1{
-	margin-top: 0;
+	padding-top: 20px;
 }
 .sec5-wrap h1,h3,h6,h4{
-	margin-bottom: 10px;
+	padding-bottom: 10px;
 	color: #005693;
 	margin-right: 60px;
 	margin-left: 144px;
@@ -420,7 +427,10 @@ html, body {
 	margin-left: 144px;
 }
 .sec5-wrap h1{
-	padding-top: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 0;
+	margin-bottom: 0;
 
 }
 .sec5 h1::before{
@@ -441,18 +451,17 @@ html, body {
 
 	width: 100%;
 	background: url("../img/nav-bg.png");
-
 }
 .sec6 h4{
-	border-bottom: 20px;
 	border-bottom: 2px solid white;
 
 }
 .sec6-wrap h1,h3,h6,h4{
-	margin-bottom: 10px;
 	color: #005693;
 	margin-right: 60px;
 	margin-left: 144px;
+	padding-top: 40px;
+
 }
 .sec6-wrap > p{
 	line-height: 1.5em;
@@ -460,7 +469,8 @@ html, body {
 	margin-left: 144px;
 }
 .sec6-wrap h1{
-	padding-top: 15px;
+	padding-bottom: 20px;
+	margin-top: 0;
 
 }
 .sec6 h1::before{
@@ -474,7 +484,7 @@ html, body {
 	margin-left: -70px;
 }
 .sec6 h4{
-	padding-bottom: 0;
+	padding-bottom: 20px;
 	margin-bottom: 0;
 
 }
@@ -669,35 +679,27 @@ html, body {
 	padding-bottom: 115px;
 
 }
-footer{
-	overflow: hidden;
+
+.l-f,.r-f{
+
 	height: 50px;
 }
-footer p{
-	padding: 0px;
-	margin: 0px;
-}
 
-.l-f{
-	background: #1875b8;
-	width: 13.5%;
-	height: 74px;
+.f-info{
 	float: left;
-}
+	line-height: 50px;
 
-.r-f{
-	float: left;
-	width: 86.5%;
-	background: #005e9b;
 }
-.r-f p{
-	margin-left: 27px;
-	line-height: 54px;
-	height: 54px;
+.f-info p{
 	color: white;
+	font-size: 80%;
+	margin: 0 0 0 25px;
 }
-
-
+.f-img{
+	float: right;
+	line-height: 50px;
+	margin: 0 20px 0 0;
+}
 /*@media (max-width: 600px) {
 html {
 	background: url("../assets/img/banner.png");
